@@ -1,0 +1,441 @@
+/* Base theme classes applied to body */
+body.theme-light {
+  --bg-color: #f8fafc;
+  --text-color: #333;
+  --card-bg: #fff;
+  --section-bg: #f9f9f9;
+  --programs-bg: #f8f9fa;
+  --overlay: rgba(0, 0, 0, 0.4);
+  --step-bg: #fff;
+  --step-shadow: rgba(0, 0, 0, 0.1);
+  --desc-color: #555;
+  --time-color: #888;
+  --logo-filter: brightness(1);
+}
+
+body.theme-dark {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --card-bg: #2d2d2d;
+  --section-bg: #252525;
+  --programs-bg: #2a2a2a;
+  --overlay: rgba(0, 0, 0, 0.7);
+  --step-bg: #3d3d3d;
+  --step-shadow: rgba(0, 0, 0, 0.3);
+  --desc-color: #ccc;
+  --time-color: #aaa;
+  --logo-filter: brightness(1.2);
+}
+
+/* Apply theme variables to all elements */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+body.theme-dark .card-section p{
+  color: black;
+}
+
+body.theme-dark .upcoming-programs-section-home2 p{
+  color:white
+}
+body.theme-dark .upcoming-programs-section-home2 h2{
+  color:white
+}
+body.theme-dark .card-section p{
+  color:white
+}
+body.theme-dark .card-section h2{
+  color:white
+}
+body.theme-dark .new-card p{
+ color:black
+}
+body.theme-dark .new-card h3{
+ color:black
+}
+body.theme-dark .partners-title{
+  color:black
+}
+/* Hero Section */
+.hero-home2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video-home2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-overlay-home2 {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  background: var(--overlay);
+}
+
+.hero-overlay-home2 h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-overlay-home2 p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.hero-buttons-home2 {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-home2 {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #00CAE0;
+  color: white;
+}
+
+.btn-home2:hover {
+  background-color: #00b8cc;
+}
+
+/* Impact Pathway Section */
+.impact-pathway {
+  background: var(--section-bg);
+  padding: 3rem 1rem;
+}
+
+.pathway-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pathway-header h2 {
+  color: var(--text-color);
+}
+
+.pathway-header p {
+  color: var(--desc-color);
+}
+
+.pathway-steps {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  gap: 2rem;
+  margin: 4rem 0;
+  align-items: center;
+}
+
+.step-reverse {
+  flex-direction: row-reverse;
+}
+
+.step-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: #00CAE0;
+  color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+}
+
+.step-content {
+  flex: 1;
+  padding: 1.5rem;
+  background: var(--step-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--step-shadow);
+}
+
+.step-content h3 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  color: var(--text-color);
+  text-align: justify;
+}
+
+.impact-button {
+  background: transparent;
+  color: #00CAE0;
+  border: 2px solid #00CAE0;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.impact-button:hover {
+  background: #00CAE0;
+  color: white;
+}
+
+/* Cards Section */
+.card-section {
+  background-color: var(--section-bg);
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.section-desc {
+  color: var(--desc-color);
+  font-size: 1.1rem;
+}
+
+.custom-card {
+  border: none;
+  box-shadow: 0 2px 8px var(--step-shadow);
+  overflow: hidden;
+  background-color: var(--card-bg);
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+}
+
+.custom-card .card-img-top {
+  transition: transform 0.4s ease;
+}
+
+.custom-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.custom-card .card-title {
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+.custom-card .card-text {
+  color: var(--text-color);
+}
+
+/* Partners Section */
+.partners-section {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: var(--section-bg);
+}
+
+.partners-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.logo-image {
+  max-width: 120px;
+  margin: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+  filter: var(--logo-filter);
+}
+
+.logo-image:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* Programs Section */
+.upcoming-programs-section-home2 {
+  padding: 3rem 0;
+  background-color: var(--programs-bg);
+}
+
+.content-wrapper-home2 h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.content-wrapper-home2 p {
+  font-size: 1.1rem;
+  color: var(--desc-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.programs-grid-home2 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  padding: 0 2rem;
+}
+
+.program-card-home2 {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--step-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.program-card-home2:hover {
+  transform: translateY(-5px);
+}
+
+.program-image-home2 {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.program-info-home2 {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.program-info-home2 h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.program-info-home2 time {
+  font-size: 0.9rem;
+  color: var(--time-color);
+  margin-bottom: 0.75rem;
+}
+
+.program-info-home2 p {
+  flex: 1;
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.program-info-home2 .btn-primary {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #00CAE0;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.program-info-home2 .btn-primary:hover {
+  background-color: #00b8cc;
+}
+
+/* Contact Section */
+.contact-section {
+  width: 100vw;
+  height: 50vh;
+  background-image:
+    linear-gradient(var(--overlay), var(--overlay)),
+    url('C:\Users\DELL\Desktop\funds\charity\public\Images\c-h2.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.contact-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: white;
+  padding: 0 1rem;
+  max-width: 800px;
+}
+
+.contact-section button {
+  background-color: #00CAE0;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact-section button:hover {
+  background-color: #00b8cc;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-home2 {
+    height: 60vh;
+  }
+
+  .hero-overlay-home2 h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay-home2 p {
+    font-size: 1rem;
+  }
+
+  .step, .step-reverse {
+    flex-direction: column;
+  }
+  
+  .programs-grid-home2 {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .contact-section h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-section p {
+    font-size: 1rem;
+  }
+}
+.theme-dark .section-title{
+  color: black;
+}

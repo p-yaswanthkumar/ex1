@@ -1,0 +1,638 @@
+/* Base Styles */
+.blog-page {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* .blog-page.dark {
+  background-color: #000;
+  color: #fff;
+} */
+
+/* Hero Section - Not affected by dark mode */
+.hero-blog {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Ensure video is not affected by dark mode */
+.hero-video-blog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Hero overlay should not be affected by dark mode */
+.hero-overlay-blog {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-overlay-blog h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+.hero-overlay-blog p {
+    font-size: 1.2rem;
+    animation: fadeInRight 1s ease-out forwards;
+    color: white;
+}
+
+.hero-buttons-blog {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+
+/* Primary Button */
+.btn-blog {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: #00CAE0;
+    color: #fff;
+}
+
+.btn-blog:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #00CAE0;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .hero-blog {
+        height: 60vh;
+    }
+
+    .hero-overlay-blog {
+        padding: 0 15px;
+    }
+
+    .hero-overlay-blog h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-overlay-blog p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons-blog {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-blog {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* 2. Blog Cards */
+.blog-cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.blog-page.dark .blog-cards-section {
+  background-color: #111;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.blog-page.dark .card {
+  background-color: #222;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blog-page.dark .card:hover {
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.blog-page.dark .card-title {
+  color: #fff;
+}
+
+.card-description {
+  flex: 1;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 16px;
+  transition: color 0.3s ease;
+}
+
+.blog-page.dark .card-description {
+  color: #ddd;
+}
+
+.card-button {
+  background-color: #00cae0;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #0095a8;
+}
+
+/* 3. Impact Carousel */
+.impact-carousel {
+  position: relative;
+  padding: 5px 0;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+.blog-page.dark .impact-carousel {
+  background-color: #111;
+}
+
+.slide {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+.story-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.story-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.story-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* 4. Post Grid */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 60px 20px;
+  background: #fafafa;
+  transition: background-color 0.3s ease;
+}
+
+.blog-page.dark .post-grid {
+  background: #111;
+}
+
+.post-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-page.dark .post-card {
+  background: #222;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.post-card h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.blog-page.dark .post-card h3 {
+  color: #fff;
+}
+
+/* 5. Charity Blog Section */
+.charity-blog-section {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+  transition: background-color 0.3s ease;
+}
+
+.blog-page.dark .charity-blog-section {
+  background-color: #111;
+}
+
+.charity-blog-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.blog-page.dark .charity-blog-section h2 {
+  color: #fff;
+}
+
+.charity-blog-section h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background: linear-gradient(90deg, #00cae0, #ffffff);
+  bottom: -10px;
+  left: 25%;
+  border-radius: 2px;
+}
+
+.blog-page.dark .charity-blog-section h2::after {
+  background: linear-gradient(90deg, #00cae0, #000000);
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  transition: color 0.3s ease;
+}
+
+.blog-page.dark .intro-text {
+  color: #ccc;
+}
+
+.charity-card {
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: white;
+}
+
+.blog-page.dark .charity-card {
+  background: #222;
+}
+
+.charity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.blog-page.dark .charity-card:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1) !important;
+}
+
+.charity-card .card-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #00cae0;
+}
+
+.charity-card .card-text {
+  color: #555;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.blog-page.dark .charity-card .card-text {
+  color: #ddd;
+}
+
+/* 6. Newsletter CTA */
+.newsletter-cta {
+  background: #e8f5e9;
+  text-align: center;
+  padding: 60px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.blog-page.dark .newsletter-cta {
+  background: #1a2a1a;
+}
+
+.newsletter-cta h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.blog-page.dark .newsletter-cta h2 {
+  color: #fff;
+}
+
+.newsletter-cta p {
+  margin-bottom: 2rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.blog-page.dark .newsletter-cta p {
+  color: #ddd;
+}
+
+.newsletter-cta form {
+  display: inline-flex;
+  gap: 10px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.newsletter-cta input {
+  padding: 12px;
+  font-size: 1rem;
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.blog-page.dark .newsletter-cta input {
+  background: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+.newsletter-cta button {
+  background: #00cae0;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.newsletter-cta button:hover {
+  background: #00a0b0;
+}
+
+/* Help Hub Section */
+.help-hub-section {
+  padding: 60px 20px;
+  background-color: #eef7f2;
+  transition: background-color 0.3s ease;
+}
+
+.blog-page.dark .help-hub-section {
+  background-color: #112211;
+}
+
+.help-hub-title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2d4a3a;
+  transition: color 0.3s ease;
+}
+
+.blog-page.dark .help-hub-title {
+  color: #fff;
+}
+
+.help-hub-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.help-hub-item {
+  flex: 1 1 220px;
+  display: flex;
+  align-items: flex-start;
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.blog-page.dark .help-hub-item {
+  background: #222;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.help-hub-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.blog-page.dark .help-hub-item:hover {
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+}
+
+.help-hub-icon {
+  font-size: 2.5rem;
+  margin-right: 16px;
+  color: #00cae0;
+}
+
+.help-hub-info {
+  flex: 1;
+}
+
+.help-hub-item-title {
+  font-size: 1.4rem;
+  margin: 0 0 8px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.blog-page.dark .help-hub-item-title {
+  color: #fff;
+}
+
+.help-hub-item-desc {
+  font-size: 1rem;
+  margin: 0 0 12px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.blog-page.dark .help-hub-item-desc {
+  color: #ddd;
+}
+
+.help-hub-link {
+  color: #00cae0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.help-hub-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .charity-blog-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .story-content h2 {
+    font-size: 2rem;
+  }
+  
+  .story-content p {
+    font-size: 1rem;
+  }
+  
+  .newsletter-cta form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter-cta input,
+  .newsletter-cta button {
+    width: 100%;
+  }
+  
+  .hero-blog {
+    height: 60vh;
+  }
+
+  .hero-overlay-blog {
+    padding: 0 15px;
+  }
+
+  .hero-overlay-blog h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay-blog p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons-blog {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-blog {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+/* Add Poppins font */
+@import url('https://fonts.googleapis.comcss2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

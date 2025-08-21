@@ -1,0 +1,237 @@
+/* General Styles */
+.blog-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.blog-page.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Section 1: Program Overview */
+.outreach-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+}
+
+.dark .outreach-section {
+    background-color: #111;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.dark .section-title {
+    color: #fff;
+}
+
+.program-description h2 {
+    color: #008ea8;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.dark .program-description h2 {
+    color: #00cae0;
+}
+
+.program-description p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.dark .program-description p {
+    color: #ddd;
+}
+
+.program-description ul {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.dark .program-description ul {
+    color: #ddd;
+}
+
+.program-description ul li {
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.dark .program-description ul li {
+    color: #ddd;
+}
+
+/* Section 2: Success Stories */
+.success-stories {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+}
+
+.dark .success-stories {
+    background-color: #111;
+}
+
+.success-stories h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.dark .success-stories h2 {
+    color: #fff;
+}
+
+.card {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.dark .card {
+    background-color: #222;
+    color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.dark .card-body {
+    background-color: #222;
+}
+
+.card-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.dark .card-title {
+    color: #fff;
+}
+
+.card-text {
+    transition: color 0.3s ease;
+}
+
+.dark .card-text {
+    color: #ddd;
+}
+
+/* Section 3: Program Details */
+.program-details {
+    padding: 4rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.dark .program-details {
+    background-color: #111;
+}
+
+.program-stats, .get-involved {
+    height: 100%;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dark .program-stats, .dark .get-involved {
+    background-color: #222;
+}
+
+.stat-item {
+    margin-bottom: 1.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #008ea8;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.dark .stat-number {
+    color: #00cae0;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #7f8c8d;
+    transition: color 0.3s ease;
+}
+
+.dark .stat-label {
+    color: #ccc;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #008ea8;
+    border-color: #008ea8;
+}
+
+.btn-primary:hover {
+    background-color: #008ea8;
+    border-color: #008ea8;
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: #008ea8;
+    border-color: #008ea8;
+}
+
+.btn-outline-primary:hover {
+    background-color: #008ea8;
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .program-description h2 {
+        font-size: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}

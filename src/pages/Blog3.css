@@ -1,0 +1,252 @@
+/* Blog3.css */
+
+/* Global Styles */
+:root {
+  --primary-color: #00CAE0;
+  --text-color: #000000;
+  --background-color: #ffffff;
+  --secondary-background: #f5f5f5;
+  --hover-background: #e0e0e0;
+  --card-shadow: rgba(0, 31, 77, 0.1);
+  --highlight-color: #00CAE0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container - Full Width */
+.stories-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.stories-container.dark {
+  --text-color: #ffffff;
+  --background-color: #000000;
+  --secondary-background: #1a1a1a;
+  --hover-background: #333333;
+  --card-shadow: rgba(255, 255, 255, 0.1);
+  --highlight-color: #00a0b0;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  color: var(--text-color);
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+/* Section Styles */
+.section {
+  margin-bottom: 50px;
+  padding: 30px;
+  background-color: var(--secondary-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--card-shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-description {
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  line-height: 1.8;
+  transition: color 0.3s ease;
+}
+
+/* Story Cards */
+.story-card {
+  background-color: var(--background-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--card-shadow);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+  color: var(--text-color); /* Ensure text color follows theme */
+}
+
+.story-card:hover {
+  background-color: var(--highlight-color);
+  color: #ffffff !important; /* Force white text on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 202, 224, 0.25);
+}
+
+.story-card h3 {
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+  color: inherit; /* Inherit from parent */
+}
+
+.story-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+  color: inherit; /* Inherit from parent */
+}
+
+/* Force white text on hover for all child elements */
+.story-card:hover,
+.story-card:hover h3,
+.story-card:hover p {
+  color: #ffffff !important;
+}
+
+/* Dark Mode Specific Adjustments */
+.stories-container.dark .section {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.stories-container.dark .story-card {
+  background-color: #222222;
+  border-left: 4px solid #00a0b0;
+  color: #ffffff; /* White text in dark mode */
+}
+
+.stories-container.dark .story-card h3,
+.stories-container.dark .story-card p {
+  color: #ffffff; /* White text in dark mode */
+}
+
+.stories-container.dark .story-card:hover {
+  background-color: #00a0b0;
+}
+
+/* Light Mode Specific Adjustments */
+.stories-container:not(.dark) .story-card {
+  color: #000000; /* Black text in light mode */
+}
+
+.stories-container:not(.dark) .story-card h3,
+.stories-container:not(.dark) .story-card p {
+  color: #000000; /* Black text in light mode */
+}
+
+.stories-container:not(.dark) .story-card:hover {
+  background-color: var(--highlight-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .stories-container {
+    padding: 30px 15px;
+  }
+  
+  h1 {
+    font-size: 2.4rem;
+  }
+  
+  h2 {
+    font-size: 1.9rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stories-container {
+    padding: 20px 10px;
+  }
+  
+  .content-wrapper {
+    padding: 0 10px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  .section {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .section-description {
+    font-size: 1.1rem;
+  }
+  
+  .story-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .story-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  .section {
+    padding: 15px;
+  }
+  
+  .story-card {
+    padding: 12px;
+  }
+}

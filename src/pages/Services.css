@@ -1,0 +1,546 @@
+/* Hero Section */
+.hero-services {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-services.dark .hero-overlay-services {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-video-services {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-overlay-services {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-overlay-services h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+.hero-overlay-services p {
+    font-size: 1.2rem;
+    animation: fadeInRight 1s ease-out forwards;
+    color: white;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .hero-services{
+        height: 60vh;
+    }
+
+    .hero-overlay-services {
+        padding: 0 15px;
+    }
+
+    .hero-overlay-services h1 {
+        font-size: 0.8rem;
+    }
+
+    .hero-overlay-services p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Services Section */
+.services-section {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-section.dark {
+    background-color: #000;
+}
+
+.services-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.services-header h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.services-header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.service-card.dark {
+    background: #222;
+    color: white;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #00CAE0, #ffffff);
+    transition: height 0.3s ease;
+}
+
+.service-card:hover::before {
+    height: 10px;
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #00CAE0;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.service-card.dark h3 {
+    color: white;
+}
+
+.service-card p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.service-card.dark p {
+    color: #ccc;
+}
+
+.learn-more-btn {
+    background: none;
+    border: none;
+    color: #00CAE0;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    color: #00a0b0;
+    gap: 1rem;
+}
+
+/* Impact Stories Section */
+.impact-section {
+    width: 100%;
+    padding: 1rem 0;
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+    height: 110vh;
+}
+
+.impact-section.dark {
+    background: linear-gradient(135deg, #000 0%, #000 100%);
+}
+
+.impact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.section-header.dark h2 {
+    color: white;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-header.dark p {
+    color: #ccc;
+}
+
+.carousel-wrapper {
+    padding: 1rem 0 3rem;
+}
+
+.story-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-card.dark {
+    background: #222;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.story-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+}
+
+.card-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content blockquote {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    position: relative;
+    flex-grow: 1;
+}
+
+.card-content.dark blockquote {
+    color: white;
+}
+
+.card-content blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    color: #00CAE0;
+    opacity: 0.2;
+    position: absolute;
+    top: -1.5rem;
+    left: -1rem;
+}
+
+.author-info h4 {
+    color: #2c3e50;
+    margin-bottom: 0.3rem;
+}
+
+.author-info.dark h4 {
+    color: white;
+}
+
+.author-info p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.author-info.dark p {
+    color: #ccc;
+}
+
+/* Metric Comparison Section */
+.metric-comparison {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.metric-comparison.dark {
+    background-color: #000;
+}
+
+.metric-comparison.dark h2 {
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th {
+    background: #00CAE0;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+
+th.dark {
+    background: #00a0b0;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+tr.dark {
+    background: #222;
+}
+
+tr.dark:nth-child(even) {
+    background: #333;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.metric-cta {
+    background: #00CAE0;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.metric-cta:hover {
+    background: #00a0b0;
+}
+
+ul {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 0.3rem;
+}
+
+/* Volunteer Section */
+.volunteer-section {
+    background-color: #f4f9fb;
+    padding: 4rem 2rem;
+    color: #333;
+}
+
+
+.volunteer-section.dark {
+    background-color: #000000;
+ 
+}
+
+.volunteer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.volunteer-text {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 2rem;
+}
+
+.volunteer-text h2 {
+    font-size: 2rem;
+    color: #00CAE0;
+    margin-bottom: 1rem;
+}
+
+.volunteer-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.volunteer-benefits {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+.volunteer-benefits li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.volunteer-button {
+    background-color: #00CAE0;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.volunteer-button:hover {
+    background-color: #009fb3;
+}
+
+.volunteer-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.volunteer-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Utility Classes */
+.text-white {
+    color: white !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-section {
+        padding: 3rem 0;
+    }
+    
+    .services-header h2 {
+        font-size: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-section {
+        padding: 4rem 0;
+        height: auto;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .card-image {
+        height: 200px;
+    }
+
+    .volunteer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .volunteer-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Animation keyframes */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

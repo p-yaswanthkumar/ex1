@@ -1,0 +1,562 @@
+/* Theme variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --primary-color: #00CAE0;
+  --secondary-color: #000000;
+  --overlay-color: rgba(0, 72, 105, 0.6);
+  --button-bg: #00CAE0;
+  --button-text: #ffffff;
+  --modal-bg: #ffffff;
+  --stats-bg: #00CAE0;
+  --stats-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --card-border: #333333;
+  --primary-color: #00CAE0;
+  --secondary-color: #ffffff;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+  --button-bg: #00CAE0;
+  --button-text: #ffffff;
+  --modal-bg: #1e1e1e;
+  --stats-bg: #00CAE0;
+  --stats-text: #ffffff;
+}
+[data-theme="dark"] .container-health p{
+  color:#fff;
+}
+[data-theme="dark"] .container-health h2{
+  color:#fff;
+}
+[data-theme="dark"] .emotional-appeal-healthcare h2,p{
+  color:#000000;
+}
+/* Apply theme variables to elements */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+/* Hero Section */
+.hero-section-healthcare {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-image-healthcare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  animation: zoomEffect 15s infinite alternate;
+}
+
+.hero-overlay-healthcare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-color);
+  z-index: 2;
+}
+
+.hero-content-healthcare {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.hero-title-healthcare {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-subtitle-healthcare {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animation */
+@keyframes zoomEffect {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+/* Second section */
+.promo-container-health {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.image-side-health,
+.content-side-health {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.image-side-health img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.emotional-appeal-health h2 {
+  color: var(--text-color);
+}
+
+.donate-button-health {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Programs Section */
+.programs-section-health {
+  background-color: var(--bg-color);
+  padding: 20px 0;
+  position: relative;
+}
+
+.programs-section-health h2,
+.programs-section-health .subtitle {
+  color: var(--text-color);
+}
+
+.container-health {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.programs-grid-health {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.program-card-health {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--primary-color);
+}
+
+.program-card-health:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.program-icon-health {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.program-card-health h3 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.program-card-health p {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.learn-more {
+  color: var(--primary-color);
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.learn-more::after {
+  content: '→';
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover::after {
+  transform: translateX(5px);
+}
+
+/* Volunteer Spotlight */
+.volunteer-spotlight {
+  padding: 2rem 2rem;
+  background: var(--bg-color);
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.volunteer-row {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scrollbar-width: none;
+}
+
+.volunteer-row::-webkit-scrollbar {
+  display: none;
+}
+
+.volunteer-card {
+  min-width: 280px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--card-border);
+}
+
+.volunteer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.role-location {
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.stats-badge {
+  background: var(--stats-bg);
+  color: var(--stats-text);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Modal Styles */
+.volunteer-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: var(--modal-bg);
+  border-radius: 16px;
+  width: 80%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  position: relative;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-image {
+  height: 100%;
+  min-height: 400px;
+  background-size: cover;
+  background-position: top;
+}
+
+.modal-text {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-text h3 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.story {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.impact-stat {
+  background: var(--stats-bg);
+  color: var(--stats-text);
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.volunteer-cta {
+  background: var(--secondary-color);
+  color: var(--button-text);
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.volunteer-cta:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+  z-index: 10;
+}
+
+/* CTA Section */
+.animated-cta {
+  position: relative;
+  padding: 6rem 0;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #00CAE0 0%, #008EA8 100%);
+  z-index: -1;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.cta-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn.primary {
+  background: white;
+  color: #00CAE0;
+  border: none;
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .volunteer-row {
+    gap: 1.5rem;
+  }
+  
+  .modal-content {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+  
+  .modal-image {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title-healthcare {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle-healthcare {
+    font-size: 1.1rem;
+  }
+  
+  .volunteer-spotlight {
+    padding: 4rem 1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .volunteer-card {
+    min-width: 240px;
+  }
+  
+  .image-side-health,
+  .content-side-health {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .programs-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title-healthcare {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle-healthcare {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .modal-text {
+    padding: 2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+}

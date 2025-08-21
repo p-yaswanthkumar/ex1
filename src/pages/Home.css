@@ -1,0 +1,520 @@
+/* Global dark mode styles */
+body.dark-mode {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+
+.second-container.dark,
+.programs-section.dark,
+.charity-impact-home1.dark,
+.testimonials-fullscreen-home1.dark,
+.contact-section-home1.dark {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.program-card.dark,
+.stat-card-home1.dark,
+.testimonial-card-home1.dark {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+/* Dark mode specific styles */
+.dark .program-title,
+.dark .program-tagline,
+.dark .program-desc,
+.dark .stat-label-home1,
+.dark .stat-desc-home1,
+.dark .testimonial-name-home1,
+.dark .testimonial-text-home1,
+.dark .contact-title,
+.dark .contact-text {
+  color: #fff !important;
+}
+
+.dark .secondary-button {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.dark .secondary-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Hero Section */
+.hero-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container.dark {
+  background: none;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.hero-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  background: #00CAE0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero-btn:hover {
+  background: #00CAE0;
+}
+
+/* Second Section */
+.second-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #000;
+  box-sizing: border-box;
+  padding: 10px 2rem;
+}
+
+.second-content {
+  max-width: 50%;
+  margin: 10px 0;
+}
+
+.second-con-greeting {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #00CAE0;
+}
+
+.sec-hero-title {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.sec-hero-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.sec-hero-button {
+  background-color: #00CAE0;
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.sec-hero-button:hover {
+  opacity: 0.9;
+}
+
+.hero-image-wrapper {
+  max-width: 45%;
+  display: flex;
+  object-fit: cover;
+  margin: 10px 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* Third Section */
+.programs-section {
+  padding: 2rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.programs-title {
+  font-size: 2rem;
+  color: #00CAE0;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.program-card {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.program-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.program-title {
+  font-size: 1.25rem;
+  color: #00CAE0;
+  margin-bottom: 0.5rem;
+}
+
+.program-tagline {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.program-desc {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Counter Section */
+.charity-impact-home1 {
+  width: 100%;
+  min-height: 50vh;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+}
+
+.impact-header-home1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.impact-header-home1 h2 {
+  font-size: 2.5rem;
+  color: #00CAE0;
+  margin-bottom: 0.5rem;
+}
+
+.impact-header-home1 p {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.impact-stats-home1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+}
+
+.stat-card-home1 {
+  background-color: #00CAE0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card-home1:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number-home1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label-home1 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.stat-desc-home1 {
+  font-size: 0.9rem;
+  color: #f0f0f0;
+  margin-bottom: 0;
+}
+
+.impact-cta-home1 {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.cta-button,
+.secondary-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  margin: 0.25rem;
+}
+
+.cta-button {
+  background-color: #00CAE0;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #009bbf;
+}
+
+.secondary-button {
+  background-color: transparent;
+  border: 2px solid #00CAE0;
+  color: #00CAE0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: #00CAE0;
+  color: #fff;
+}
+
+/* Testimonial Section */
+.testimonials-fullscreen-home1 {
+  width: 100vw;
+  min-height: 80vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.testimonials-title-home1 {
+  font-size: 2rem;
+  color: #00CAE0;
+  margin-bottom: 1.5rem;
+}
+
+.testimonials-container-home1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.testimonial-card-home1 {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-photo-home1 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonial-name-home1 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.testimonial-stars-home1 .star {
+  color: #ccc;
+  font-size: 1.25rem;
+}
+
+.testimonial-stars-home1 .star.filled {
+  color: #00CAE0;
+}
+
+.testimonial-text-home1 {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #555;
+  margin-top: 1rem;
+}
+
+.testimonial-btn-home1 {
+  background-color: #00CAE0;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.testimonial-btn-home1:hover {
+  background-color: #00CAE0;
+}
+
+/* Contact Section */
+.contact-section-home1 {
+  background-color: #f8f9fa;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.contact-text {
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .second-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .second-content,
+  .hero-image-wrapper {
+    max-width: 100%;
+  }
+
+  .hero-image-wrapper {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .impact-header-home1 h2 {
+    font-size: 2rem;
+  }
+
+  .impact-header-home1 p {
+    font-size: 1rem;
+  }
+
+  .stat-number-home1 {
+    font-size: 1.8rem;
+  }
+
+  .stat-label-home1 {
+    font-size: 0.95rem;
+  }
+
+  .stat-desc-home1 {
+    font-size: 0.85rem;
+  }
+
+  .impact-stats-home1 {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .cta-button,
+  .secondary-button {
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0.8rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .second-con-greeting {
+    font-size: 1rem;
+  }
+
+  .sec-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .sec-hero-description {
+    font-size: 1rem;
+  }
+
+  .sec-hero-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-image {
+    border-radius: 0.5rem;
+  }
+}

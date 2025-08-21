@@ -1,0 +1,569 @@
+/* Base Styles */
+.elderly-care {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.elderly-care.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Hero Section */
+.elder-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('C:\Users\DELL\Desktop\funds\charity\public\Images\elderly-care.jpg') center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+}
+
+.dark .elder-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('C:\Users\DELL\Desktop\funds\charity\public\Images\elderly-care.jpg') center/cover;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.hero-cta {
+    background: #00CAE0;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+    background: #0095a8;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 202, 224, 0.4);
+}
+
+/* Promo Section */
+.promo-container-elder{
+    display: flex;
+    min-height: 500px;
+}
+
+.image-side-elder {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-side-elder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-side-elder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background: white; /* Default light mode background */
+    transition: background-color 0.3s ease;
+}
+
+.dark .content-side-elder {
+    background: #111; /* Dark mode background */
+}
+
+.emotional-appeal-elder h2 {
+    font-size: 2.5rem;
+    color: #333; /* Default light mode color */
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.dark .emotional-appeal-elder h2 {
+    color: #ffffff; /* Dark mode color */
+}
+.dark .emotional-appeal-elder p {
+    color: #000000; /* Dark mode color */
+}
+
+
+.emotional-appeal-elder p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #555; /* Default light mode color */
+    transition: color 0.3s ease;
+}
+
+.dark .emotional-appeal-elder p {
+    color: #ddd; /* Dark mode color */
+}
+
+.donate-button {
+    background: #00CAE0;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.donate-button:hover {
+    background: #0095a8;
+}
+
+/* Services Section */
+.services-showcase {
+    padding: 5rem 2rem;
+    background: white;
+    transition: background-color 0.3s ease;
+}
+
+.dark .services-showcase {
+    background: #000;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    transition: color 0.3s ease;
+}
+
+.dark .section-title {
+    color: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.dark .service-card {
+    background: #222;
+    color: white;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 202, 224, 0.2);
+}
+
+.dark .service-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 202, 224, 0.4);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.dark .service-card h3 {
+    color: #fff;
+}
+
+.service-card p {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.dark .service-card p {
+    color: #ddd;
+}
+
+/* Donation Tiers Section */
+.donation-tiers {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 6rem 1rem;
+    transition: background 0.3s ease;
+}
+
+.dark .donation-tiers {
+    background: linear-gradient(135deg, #111 0%, #222 100%);
+}
+
+.tiers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tier-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.dark .tier-card {
+    background: #222;
+    color: white;
+    box-shadow: 0 5px 20px rgba(255,255,255,0.05);
+}
+
+.tier-card.featured {
+    border: 2px solid #00CAE0;
+    transform: scale(1.05);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #00CAE0;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.tier-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.dark .tier-card h3 {
+    color: #fff;
+}
+
+.tier-amount {
+    font-size: 1.5rem;
+    color: #00CAE0;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.tier-benefits {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.tier-benefits li {
+    margin-bottom: 1rem;
+    position: relative;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.dark .tier-benefits li {
+    color: #ddd;
+}
+
+.tier-benefits li::before {
+    content: "•";
+    color: #00CAE0;
+    font-size: 1.5rem;
+    position: absolute;
+    left: -1.5rem;
+}
+
+.tier-button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.tier-button:hover {
+    background: #00CAE0;
+    transform: translateY(-3px);
+}
+
+.featured-btn {
+    background: #00CAE0;
+}
+
+.featured-btn:hover {
+    background: #0095a8;
+}
+
+/* Success Stories Carousel */
+.success-stories {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.dark .success-stories {
+    background-color: #111;
+}
+
+.stories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.story-carousel {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.dark .story-carousel {
+    box-shadow: 0 15px 40px rgba(255,255,255,0.1);
+}
+
+.story-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+}
+
+.story-slide.active {
+    opacity: 1;
+}
+
+.story-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.story-content {
+    flex: 1;
+    padding: 3rem;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .story-content {
+    background: #222;
+    color: white;
+}
+
+blockquote {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.dark blockquote {
+    color: #fff;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    color: #00CAE0;
+    position: absolute;
+    left: -2rem;
+    top: -1rem;
+    opacity: 0.3;
+}
+
+.story-author {
+    font-weight: 600;
+    color: #00CAE0;
+    font-size: 1.2rem;
+}
+
+.story-badge {
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    margin-top: 1.5rem;
+    align-self: flex-start;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: #00CAE0;
+}
+
+/* CTA Section */
+.cta-section {
+    background: #00CAE0;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.dark .cta-section {
+    background: #008a9c;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn.donate {
+    background-color: white;
+    color: #00CAE0;
+}
+
+.cta-btn.volunteer {
+    background-color: black;
+    color: white;
+}
+
+.dark .cta-btn.volunteer {
+    background-color: white;
+    color: black;
+}
+
+.cta-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .promo-container {
+        flex-direction: column;
+    }
+    
+    .image-side, .content-side {
+        flex: none;
+        width: 100%;
+    }
+    
+    .image-side {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .story-carousel {
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .story-slide {
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .story-image {
+        min-height: 300px;
+    }
+    
+    blockquote {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,502 @@
+/* Color Variables */
+:root {
+  --primary: #00CAE0;
+  --secondary: #000000;
+  --white: #FFFFFF;
+  --light-bg: #F8F9FA;
+  --dark-text: #212529;
+  --light-text: #6C757D;
+  --background: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --section-bg: #F8F9FA;
+  --border: #e0e0e0;
+}
+
+[data-theme="dark"] {
+  --primary: #00CAE0;
+  --secondary: #121212;
+  --white: #FFFFFF;
+  --light-bg: #2d2d2d;
+  --dark-text: #FFFFFF;
+  --light-text: #cccccc;
+  --background: #1a1a1a;
+  --card-bg: #2d2d2d;
+  --section-bg: #2d2d2d;
+  --border: #444444;
+}
+
+/* Base Styles */
+.disaster-relief-page {
+  font-family: 'Arial', sans-serif;
+  color: var(--dark-text);
+  background-color: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  background-image: url('C:\Users\DELL\Desktop\funds\charity\public\Images\disaster-relief.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  color: white;
+}
+
+/* Second section */
+.promo-container-disaster {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: var(--background);
+}
+
+.image-side-disaster,
+.content-side-disaster {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.image-side-disaster img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.emotional-appeal-disaster h2 {
+  color: var(--dark-text);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.emotional-appeal-disaster p {
+  color: var(--dark-text);
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.donate-button {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #00a8c0;
+}
+
+@media screen and (max-width: 768px) {
+  .image-side,
+  .content-side {
+    flex: 1 1 100%;
+  }
+}
+
+/* Campaigns Section */
+.campaigns-section {
+  background-color: var(--section-bg);
+  padding: 4rem 0;
+}
+
+.campaigns-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.campaigns-title {
+  font-size: 2rem;
+  color: var(--dark-text);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.campaigns-subtitle {
+  text-align: center;
+  color: var(--light-text);
+  margin-bottom: 2rem;
+}
+
+.campaigns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.campaign-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.3s ease;
+  border: 1px solid var(--border);
+}
+
+.campaign-card:hover {
+  transform: translateY(-5px);
+}
+
+.campaign-urgent {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.campaign-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--dark-text);
+}
+
+.campaign-description {
+  color: var(--light-text);
+  margin-bottom: 1.5rem;
+}
+
+.campaign-progress-container {
+  margin: 2rem 0;
+}
+
+.campaign-progress-bar {
+  height: 8px;
+  background-color: var(--border);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.campaign-progress-fill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 4px;
+}
+
+.campaign-progress-stats {
+  display: flex;
+  justify-content: space-between;
+  color: var(--light-text);
+  font-size: 0.9rem;
+}
+
+.campaign-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--secondary);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.campaign-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Disaster Relief Section */
+.disaster-relief {
+  background-color: var(--section-bg);
+  padding: 4rem 2rem;
+  font-family: 'Arial', sans-serif;
+  color: var(--dark-text);
+}
+
+.relief-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.relief-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-text);
+  text-align: center;
+  font-weight: 700;
+}
+
+.relief-title span {
+  color: var(--primary);
+}
+
+.relief-intro {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--dark-text);
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.approach-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border);
+}
+
+.approach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-number {
+  background-color: var(--primary);
+  color: var(--secondary);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.approach-card h3 {
+  font-size: 1.4rem;
+  color: var(--dark-text);
+  margin: 0;
+}
+
+.approach-card p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--dark-text);
+}
+
+.approach-card ul {
+  padding-left: 1.2rem;
+}
+
+.approach-card li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: var(--dark-text);
+}
+
+.approach-card strong {
+  color: var(--primary);
+}
+
+/* Services Section */
+.relief-services-container {
+  background-color: var(--section-bg);
+  padding: 40px 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--dark-text);
+}
+
+.service-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.individual-service-item {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+}
+
+.individual-service-item:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.individual-service-item:hover h3,
+.individual-service-item:hover p {
+  color: var(--secondary);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.individual-service-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--dark-text);
+}
+
+.individual-service-item p {
+  color: var(--light-text);
+  font-size: 0.95rem;
+}
+
+/* Impact Statement */
+.impact-statement {
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 2.5rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.impact-statement h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.impact-statement p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.impact-statement strong {
+  color: var(--primary);
+}
+
+.cta-button {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.cta-button:hover {
+  background-color: #00a8c0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .campaigns-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .relief-title {
+    font-size: 2rem;
+  }
+  
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .impact-statement {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}

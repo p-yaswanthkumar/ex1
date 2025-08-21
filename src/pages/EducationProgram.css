@@ -1,0 +1,451 @@
+/* Base Styles */
+.education-program {
+  font-family: 'Inter', sans-serif;
+  color: #000;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.education-program.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #f9f9f9;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-tertiary: #555555;
+  --accent-color: #00CAE0;
+  --card-bg: #f9f9f9;
+  --testimonial-bg: #f9f9f9;
+  --testimonial-main-bg: #00CAE0;
+  --icon-bg: #00CAE0;
+  --icon-color: #ffffff;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --stat-bg: rgba(255, 255, 255, 0.1);
+  --stat-border: rgba(255, 255, 255, 0.2);
+}
+
+.education-program.dark {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #3d3d3d;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-tertiary: #b0b0b0;
+  --accent-color: #00CAE0;
+  --card-bg: #2d2d2d;
+  --testimonial-bg: #2d2d2d;
+  --testimonial-main-bg: #008EA8;
+  --icon-bg: #00CAE0;
+  --icon-color: #ffffff;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --stat-bg: rgba(0, 0, 0, 0.2);
+  --stat-border: rgba(255, 255, 255, 0.1);
+}
+
+.education-program {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+/* Section 1: Diagonal Hero */
+.diagonal-hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.diagonal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('C:\Users\DELL\Desktop\funds\charity\public\Images\education-back.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.hero-content {
+  color: white;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  color: white;
+}
+
+.hero-cta {
+  background: white;
+  color: #00CAE0;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Section 2: Icon Cards */
+.icon-cards-section {
+  padding: 6rem 0;
+  background: var(--bg-secondary);
+}
+
+.cards-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.icon-card {
+  background: var(--card-bg);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border-bottom: 5px solid transparent;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+}
+
+.icon-card:hover {
+  transform: translateY(-10px);
+  border-bottom-color: var(--accent-color);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: var(--icon-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--icon-color);
+  font-size: 2rem;
+}
+
+.icon-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.icon-card p {
+  color: var(--text-tertiary);
+  line-height: 1.6;
+}
+
+/* Section 3: Zigzag Feature */
+.zigzag-feature {
+  padding: 6rem 0;
+  background: var(--bg-primary);
+}
+
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 8rem;
+}
+
+.feature-row.reversed {
+  flex-direction: row-reverse;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-text h2 {
+  text-align: left;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+
+.feature-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.feature-text ul {
+  list-style-type: none;
+}
+
+.feature-text li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.feature-text li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 1rem;
+  height: 2px;
+  background: var(--accent-color);
+}
+
+.feature-image {
+  flex: 1;
+  height: 400px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.rectangular-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.feature-image:hover .rectangular-img {
+  transform: scale(1.05);
+}
+
+/* Section 4: Stats Parallax */
+.stats-parallax {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  background: url('C:\Users\DELL\Desktop\funds\charity\public\Images\edu-pro.jpg') center/cover fixed;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-item {
+  padding: 2rem;
+  background: var(--stat-bg);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  border: 1px solid var(--stat-border);
+}
+
+.stat-item h3 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+.stat-item p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Section 5: Testimonial Cards */
+.testimonial-section {
+  padding: 6rem 0;
+  background: var(--bg-secondary);
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  background: var(--testimonial-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card.main-card {
+  background: var(--testimonial-main-bg);
+  color: white;
+  transform: scale(1.05);
+}
+
+.testimonial-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-content .author {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.main-card .author {
+  color: white;
+}
+
+/* Section 6: Animated CTA */
+.animated-cta {
+  position: relative;
+  padding: 6rem 0;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #00CAE0 0%, #008EA8 100%);
+  z-index: -1;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.cta-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn.primary {
+  background: white;
+  color: #00CAE0;
+  border: none;
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .feature-row {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .feature-image {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card.main-card {
+    transform: none;
+  }
+  
+  .zigzag-feature {
+    padding: 4rem 0;
+  }
+
+  .feature-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
