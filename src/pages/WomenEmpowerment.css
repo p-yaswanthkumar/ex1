@@ -24,8 +24,7 @@
 }
 
 .dark .empowerment-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url('C:\Users\DELL\Desktop\funds\charity\public\Images\women-back.jpg') center/cover;
+     background-image: url('/images/woman-back.jpg');
 }
 
 .hero-content-women h1 {
