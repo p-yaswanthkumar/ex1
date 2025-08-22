@@ -39,7 +39,7 @@ const servicesData = [
 ];
 
 function DisasterRelief() {
-    const [theme, setTheme] = useState('light');
+    const [, setTheme] = useState('light');
       
       // Load theme preference from localStorage on component mount
       useEffect(() => {

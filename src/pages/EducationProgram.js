@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
-import { FaBookOpen, FaUserGraduate, FaChalkboard, FaLaptopCode, FaHandsHelping, FaBullhorn } from 'react-icons/fa';
+import { FaBookOpen, FaUserGraduate, FaChalkboard } from 'react-icons/fa';
 import './EducationProgram.css';
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';

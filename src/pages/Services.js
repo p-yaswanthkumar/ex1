@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import   { useState, useEffect } from 'react';
 import './Services.css';
 import { motion } from 'framer-motion';
 import 'swiper/css';
@@ -123,7 +123,7 @@ const itemVariants = {
 };
 
 const Services = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+   
   const [theme, setTheme] = useState('light');
   const navigate = useNavigate();
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
+ // Assuming you have a CSS file for Footer styles
 
 const Footer = () => {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');

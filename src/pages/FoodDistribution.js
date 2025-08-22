@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'framer-motion';
 import './FoodDistribution.css';
 import { useNavigate } from 'react-router-dom';
@@ -19,11 +19,6 @@ const FoodDistribution = () => {
         { icon: "🌱", title: "Urban Gardens", desc: "Fresh produce from community gardens" }
     ];
 
-    const testimonials = [
-        { quote: "This program saved my family during tough times.", author: "Maria G." },
-        { quote: "My students can focus better now that they're not hungry.", author: "Teacher James L." },
-        { quote: "Volunteering here gives my life purpose.", author: "David K." }
-    ];
     
     const navigate = useNavigate();
     const [theme, setTheme] = useState('light');

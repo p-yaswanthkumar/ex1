@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import './HealthcareInitiative.css'
@@ -27,7 +27,7 @@ const programs = [
 ];
 
 const HealthcareInitiatives = () => {
-    const [theme, setTheme] = useState('light');
+    const [, setTheme] = useState('light');
     const [activeVolunteer, setActiveVolunteer] = useState(null);
     const navigate = useNavigate();
 
@@ -107,10 +107,7 @@ const HealthcareInitiatives = () => {
         }
     ];
 
-    const fadeIn = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { duration: 0.8 } }
-    };
+ 
 
     const slideUp = {
         hidden: { y: 50, opacity: 0 },

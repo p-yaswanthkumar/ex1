@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import './Blog1.css';
 
 const Blog1 = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [theme, setTheme] = useState('light');
 
     // Load theme preference from localStorage on component mount
