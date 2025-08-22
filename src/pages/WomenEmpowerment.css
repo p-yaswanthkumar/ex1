@@ -12,7 +12,6 @@
 
 /* Section 1: Hero Banner */
 .empowerment-hero {
-    background-image: url(/images/.woman-back.jpg);
   opacity: 0.7;
     height: 80vh;
     display: flex;
@@ -23,9 +22,6 @@
     padding: 0 2rem;
 }
 
-.dark .empowerment-hero {
-     background-image: url('/images/woman-back.jpg');
-}
 
 .hero-content-women h1 {
     font-size: 3.5rem;
