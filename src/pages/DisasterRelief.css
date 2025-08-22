@@ -39,7 +39,7 @@
   position: relative;
   height: 80vh;
   min-height: 500px;
-  background-image: url('C:\Users\DELL\Desktop\funds\charity\public\Images\disaster-relief.jpg');
+  background-image: url(/images/.disaster-relief.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
